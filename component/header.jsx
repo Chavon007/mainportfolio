@@ -9,38 +9,40 @@ import { useState } from "react";
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className="">
+    <div className="fixed top-0 left-0 w-full z-50 bg-[#19183B] shadow-[10px_-2px_10px_rgba(255,255,255,0.1)]">
       <div className="flex justify-between  items-center py-[25px] w-[90%] mx-auto">
         {/* Logo section */}
         <div className="bg-[#263849] w-[40px] relative lg:static   flex justify-center p-[5px] rounded rounded-3xl border border-[#3d9d91] border-3">
-          <h2 className="text-[#3d9d91] font-bold font-sans">SA</h2>
+          <Link className="text-[#3d9d91] font-bold font-sans" href="/">
+            SA
+          </Link>
         </div>
 
         {/*navbar section*/}
 
         <div
-          className={` flex-col items-center gap-7 absolute top-[70px] left-0 right-0
-          p-[10px]
-         lg:static  lg:!flex lg:flex-row lg:justify-between lg:items-center lg:w-[50%] lg:ml-[30px] lg:p-[10px] lg:gap-0 ${
-           menuOpen ? "flex " : "hidden"
-         }`}
+          className={` flex-col items-center gap-7 fixed inset-0
+            p-[10px] bg-black/70 lg:bg-transparent z-40 justify-center
+          lg:static lg:!flex lg:flex-row lg:justify-between lg:items-center lg:w-[50%] lg:ml-[30px] lg:p-[10px] lg:gap-0 ${
+            menuOpen ? "flex " : "hidden"
+          }`}
         >
           <Link
-            href=""
+            href="#about"
             className="text-[#bbc6e5] font-sans font-semibold hover:text-[#3d9d91] text-sm"
             onClick={() => setMenuOpen(false)}
           >
             About me
           </Link>
           <Link
-            href=""
+            href="#exp_pro"
             onClick={() => setMenuOpen(false)}
             className="text-[#bbc6e5] font-sans font-semibold hover:text-[#3d9d91] text-sm"
           >
             Project/Experience
           </Link>
           <Link
-            href=""
+            href="#contact"
             onClick={() => setMenuOpen(false)}
             className="text-[#bbc6e5] font-sans hover:text-[#3d9d91] font-semibold text-sm"
           >
@@ -48,7 +50,7 @@ function Header() {
           </Link>
 
           <Link
-            href=""
+            href="https://drive.google.com/file/d/10t1JhWt0cQRBv8rnho4Sl8xRsJfCIshP/view?usp=drive_link"
             onClick={() => setMenuOpen(false)}
             className="border border-1 border-[#3d9d91] w-[90px]  text-[#3d9d91] font-bold hover:scale-[1.05] transition-transform font-sans text-center text-sm p-[2px]"
           >
@@ -56,7 +58,7 @@ function Header() {
           </Link>
         </div>
 
-        <div className="lg:hidden relative ">
+        <div className="lg:hidden relative z-50 ">
           {menuOpen ? (
             <IoMdClose
               onClick={() => setMenuOpen(false)}
@@ -68,9 +70,6 @@ function Header() {
               className="text-[#3d9d91] text-3xl"
             />
           )}
-
-          <p></p>
-          <p></p>
         </div>
       </div>
     </div>

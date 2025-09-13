@@ -56,6 +56,7 @@ function Skills() {
     cssEase: "linear",
     autoplaySpeed: 0,
     slidesToScroll: 1,
+    arrows: false,
   };
   return (
     <>
@@ -63,9 +64,9 @@ function Skills() {
         <h2 className="text-center pt-[30px] text-[#ccd6f6] text-3xl font-bold font-sans">
           My Skills
         </h2>
-        <Slider {...settings}>
+        <Slider className="w-[90%] mx-auto" {...settings}>
           {myskill.map((newskill, index) => (
-            <div key={index} className="mt-[30px]">
+            <div key={index} className="mt-[70px]">
               <Image
                 src={newskill.image}
                 alt={newskill.name}

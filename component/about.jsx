@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function About() {
   return (
-    <div className="container mx-auto ">
+    <div className=" container mx-auto pt-[100px] " id="about">
       <h2 className="text-center pt-[10px] text-[#ccd6f6] text-3xl font-bold font-sans">
         About Me
       </h2>
@@ -33,14 +33,14 @@ function About() {
           </p>
         </div>
         {/* about image */}
-        <div className="w-[90%] mx-auto pt-[10px] md:w-[40%] ">
+        <div className="w-[80%] mx-auto pt-[10px] md:w-[40%] ">
           <Image
             className="rounded rounded-4xl "
             src="/2.jpg"
             alt=""
             width={100}
             height={100}
-            style={{ width: "300px", height: "300px" }}
+            style={{ width: "350px", height: "300px" }}
           />
         </div>
       </div>

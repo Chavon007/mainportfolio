@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Home() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto pt-[100px]">
       <div className=" pt-[40px] md:w-[70%] mx-auto md:flex flex-col md:justify-center md:items-center md:h-[70vh]">
         <h5 className="w-[90%] mx-auto text-sm text-center md:text-2xl font-serif tracking-[5px] p-[10px] md:font-semibold text-[#3d9d91]">
           Hi, my name is{" "}
@@ -21,7 +21,7 @@ function Home() {
         </p>
         <p className="flex justify-center mt-[20px]">
           <Link
-            href=""
+            href="#exp_pro"
             className=" text-center border border-1 border-[#3d9d91] w-[150px]  text-[#3d9d91] font-bold hover:scale-[1.05] transition-transform font-sans  text-sm p-[10px]"
           >
             My Projects
