@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 function Project() {
   const projectcard = [
@@ -26,46 +27,53 @@ function Project() {
     },
   ];
   return (
-    <div className="w-[90%] lg:w-[55%] mx-auto" id="projects">
-      {projectcard.map((project, index) => (
-        <div key={index} className="mt-[30px]">
-          <Image
-            src={project.image}
-            alt={project.image}
-            width={200}
-            height={200}
-            style={{ width: "100%", height: "60%" }}
-          />
-          <div className="mt-[10px] lg:text-center">
-            <h2 className="text-1xl text-[#97a3c1] font-bold font-serif">
-              {project.name}
-            </h2>
-            <p className="text-sm text-[#3d9d91] font-serif p-[10px]">
-              {project.desc}
-            </p>
-            <ul className="flex justify-center  items-center">
-              {project.stack.map((stack, i) => (
-                <li
-                  key={i}
-                  className="ml-[10px] text-center text-sm font-sans italic text-[#b8c9ed] "
-                >
-                  {stack}
-                </li>
-              ))}
-            </ul>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: false }}
+    >
+      <div className="w-[90%] lg:w-[55%] mx-auto" id="projects">
+        {projectcard.map((project, index) => (
+          <div key={index} className="mt-[30px]">
+            <Image
+              src={project.image}
+              alt={project.image}
+              width={1000}
+              height={1000}
+              style={{ width: "100%", height: "60%" }}
+            />
+            <div className="mt-[10px] lg:text-center">
+              <h2 className="text-1xl text-[#97a3c1] font-bold font-serif">
+                {project.name}
+              </h2>
+              <p className="text-sm text-[#3d9d91] font-serif p-[10px]">
+                {project.desc}
+              </p>
+              <ul className="flex justify-center  items-center">
+                {project.stack.map((stack, i) => (
+                  <li
+                    key={i}
+                    className="ml-[10px] text-center text-sm font-sans italic text-[#b8c9ed] "
+                  >
+                    {stack}
+                  </li>
+                ))}
+              </ul>
 
-            <div className="mt-[10px]">
-              <Link
-                href={project.link}
-                className="bg-[#3d9d91] flex justify-center items-center text-[#b8c9ed] max-w-[150px] mx-auto p-[3px] hover:bg-[#379187] text-sm font-serif"
-              >
-                See Project
-              </Link>
+              <div className="mt-[10px]">
+                <Link
+                  href={project.link}
+                  className="bg-[#3d9d91] flex justify-center items-center text-[#b8c9ed] max-w-[150px] mx-auto p-[6px] hover:bg-[#379187] text-sm font-serif"
+                >
+                  See Project
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </motion.div>
   );
 }
 export default Project;

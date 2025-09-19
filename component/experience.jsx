@@ -1,5 +1,6 @@
 import { FaGreaterThan } from "react-icons/fa";
 
+import { motion } from "framer-motion";
 function Experience() {
   const experience = [
     {
@@ -33,44 +34,51 @@ function Experience() {
     },
   ];
   return (
-    <div className="w-[90%] lg:w-[60%] mx-auto ">
-      {experience.map((experience, index) => (
-        <div key={index}>
-          <div className="lg:flex lg:justify-between lg:item-center mt-[20px]">
-            <div className="text-center lg:w-[35%] lg:text-left">
-              <p className="text-[#4f678e] font-bold text-1xl font-serif">
-                {experience.mode} | <span>{experience.location}</span>
-              </p>
-              <p className="text-[#6b7796] font-semibold text-sm font-serif">
-                {experience.period}
-              </p>
-            </div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: false }}
+    >
+      <div className="w-[90%] lg:w-[60%] mx-auto ">
+        {experience.map((experience, index) => (
+          <div key={index}>
+            <div className="lg:flex lg:justify-between lg:item-center mt-[20px]">
+              <div className="text-center lg:w-[35%] lg:text-left">
+                <p className="text-[#4f678e] font-bold text-1xl font-serif">
+                  {experience.mode} | <span>{experience.location}</span>
+                </p>
+                <p className="text-[#6b7796] font-semibold text-sm font-serif">
+                  {experience.period}
+                </p>
+              </div>
 
-            <div className=" mt-[10px] lg:mt-o lg:w-[65%]">
-              <h3 className="text-center lg:text-left text-[#97a3c1] text-2xl font-bold font-sans">
-                {experience.name}
-              </h3>
-              <h6 className="text-base font-mons text-[#97a3c1] py-[5px]">
-                {experience.position}
-              </h6>
-              <ul>
-                {experience.resp.map((task, i) => (
-                  <li
-                    key={i}
-                    className="py-[5px] text-sm text-[#b8c9ed] flex justify-between items-center"
-                  >
-                    <span className="pr-[20px] text-[#3d9d91]">
-                      <FaGreaterThan />
-                    </span>
-                    {task}
-                  </li>
-                ))}
-              </ul>
+              <div className=" mt-[10px] lg:mt-o lg:w-[65%]">
+                <h3 className="text-center lg:text-left text-[#97a3c1] text-2xl font-bold font-sans">
+                  {experience.name}
+                </h3>
+                <h6 className="text-base font-mons text-[#97a3c1] py-[5px]">
+                  {experience.position}
+                </h6>
+                <ul>
+                  {experience.resp.map((task, i) => (
+                    <li
+                      key={i}
+                      className="py-[5px] text-sm text-[#b8c9ed] flex justify-between items-center"
+                    >
+                      <span className="pr-[20px] text-[#3d9d91]">
+                        <FaGreaterThan />
+                      </span>
+                      {task}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </motion.div>
   );
 }
 
