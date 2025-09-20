@@ -28,17 +28,20 @@ function Contact() {
       return;
     } else {
       try {
-        const res = await fetch("https://profilebackend-18bx.onrender.com/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: email,
-            subject: subject,
-            message: message,
-          }),
-        });
+        const res = await fetch(
+          "https://profilebackend-18bx.onrender.com/send-email",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: email,
+              subject: subject,
+              message: message,
+            }),
+          }
+        );
 
         const data = await res.json();
         if (res.ok) {
