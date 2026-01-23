@@ -25,6 +25,21 @@ function Project() {
       stack: ["HTML", "Tailwind CSS", "JavaScript", "Express.js", "MongoDB"],
       link: "https://eventhub-eight-gamma.vercel.app/",
     },
+
+    {
+      image: "/budgethubby.png",
+      name: "BudgetHubby",
+      desc: "",
+      stack: ["React", "Tailwind CSS", "mongodb"],
+      link: "https://budget-buddy-one-tau.vercel.app/",
+    },
+       {
+      image: "/coinhub.png",
+      name: "CoinHub",
+      desc: "",
+      stack: ["nextjs", "Tailwind CSS", "mongodb"],
+      link: "",
+    },
   ];
   return (
     <motion.div
