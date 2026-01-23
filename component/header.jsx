@@ -50,7 +50,7 @@ function Header() {
           </Link>
 
           <Link
-            href="https://docs.google.com/document/d/1kLXZEfFw-SG2BfSMC8-PNumSUmIjsrj8/edit?usp=drive_link&ouid=105650029138463119659&rtpof=true&sd=true"
+            href="https://docs.google.com/document/d/1puF6qj6JfFW5-YyK1m_jDcu_RmydaHwo/edit?usp=drive_link&ouid=105650029138463119659&rtpof=true&sd=true"
             onClick={() => setMenuOpen(false)}
             className="border border-1 border-[#3d9d91] w-[90px]  text-[#3d9d91] font-bold hover:scale-[1.05] transition-transform font-sans text-center text-sm p-[2px]"
           >
