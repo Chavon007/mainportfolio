@@ -29,16 +29,9 @@ function Project() {
     {
       image: "/budgethubby.png",
       name: "BudgetHubby",
-      desc: "",
+      desc: "BudgetBuddy is a personal finance app that allows users to track income and expenses, view monthly financial records, and set savings goals to manage their money effectively.",
       stack: ["React", "Tailwind CSS", "mongodb"],
       link: "https://budget-buddy-one-tau.vercel.app/",
-    },
-       {
-      image: "/coinhub.png",
-      name: "CoinHub",
-      desc: "",
-      stack: ["nextjs", "Tailwind CSS", "mongodb"],
-      link: "",
     },
   ];
   return (
