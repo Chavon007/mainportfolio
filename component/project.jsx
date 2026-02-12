@@ -44,6 +44,7 @@ function Project() {
       <div className="w-[90%] lg:w-[55%] mx-auto" id="projects">
         {projectcard.map((project, index) => (
           <div key={index} className="mt-[30px]">
+          
             <Image
               src={project.image}
               alt={project.image}
