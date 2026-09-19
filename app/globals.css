@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+@theme {
+  --color-background: #040605;
+  --color-text: #ecece3;
+  --color-text1: #afb1a9;
+  --color-text2: #56df94;
+  --color-text3: #d2d1c8;
+  --color-background1: #0c1510;
+
+  --font-ibm: var(--font-ibm-plex-mono), monospace;
+  --font-manrope: var(--font-manrope), sans-serif;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 100px 80px;
+}
+
+@keyframes pipeline-scan {
+  0%,
+  100% {
+    background-color: #040605;
+  }
+  15%,
+  35% {
+    background-color: #0c1510;
+  }
+}
+
+.pipeline-row {
+  animation: pipeline-scan 5s ease-in-out infinite;
+}

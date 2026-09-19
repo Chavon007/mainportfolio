@@ -3,18 +3,32 @@ import "./globals.css";
 import Header from "@/component/header";
 import Footer from "@/component/footer";
 
+import { IBM_Plex_Mono, Manrope } from "next/font/google";
+
 export const metadata = {
   title: "Salvation Azuh || Web Developer",
   description: "Salvation Azuh Full-stack Developer",
 };
 
+const ibemPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-ibm-plex-mono",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-manrope",
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="bg-[#19183B] h-fit container mx-auto">
+    <html lang="en" className={`${ibemPlexMono.variable} ${manrope.variable}`}>
+      <body className="">
         <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

@@ -1,43 +1,143 @@
 "use client";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import { FaArrowDownLong } from "react-icons/fa6";
+import { MdArrowOutward } from "react-icons/md";
+const buttonContent = [
+  {
+    text: "View past works",
+    link: "#project",
+    icon: <FaArrowDownLong />,
+    background: "bg-text2",
+    textColor: "text-background",
+    hover: "",
+  },
+  {
+    text: "Let's Talk",
+    link: "#contact",
+    icon: <MdArrowOutward />,
+    background: "bg-transparent",
+    textColor: "text-text",
+    hover: "hover:border-text2 hover:text-text2",
+  },
+];
 
+const pipeline = [
+  {
+    id: "01",
+    title: "Idea",
+    text: "Ready",
+    color: "text-text1",
+  },
+  {
+    id: "02",
+    title: "Interface",
+    text: "Ready",
+    color: "text-text1",
+  },
+  {
+    id: "03",
+    title: "API",
+    text: "Ready",
+    color: "text-text1",
+  },
+  {
+    id: "04",
+    title: "Database",
+    text: "Ready",
+    color: "text-text1",
+  },
+  {
+    id: "05",
+    title: "Deployment",
+    text: "Ready",
+    color: "text-text1",
+  },
+  {
+    id: "06",
+    title: "Product",
+    text: "Shipped",
+    color: "text-text2",
+  },
+];
 function Home() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      viewport={{ once: false }}
-    >
-      <div className="container mx-auto pt-[100px]">
-        <div className=" pt-[40px] md:w-[70%] mx-auto md:flex flex-col md:justify-center md:items-center md:h-[70vh]">
-          <h5 className="w-[90%] mx-auto text-sm text-center md:text-2xl font-serif tracking-[5px] p-[10px] md:font-semibold text-[#3d9d91]">
-            Hi, my name is{" "}
-          </h5>
-          <h2 className="w-[100%]  text-1.5xl text-center md:text-4xl lg:text-6xl p-[10px] text-[#ccd6f6] font-bold font-serif">
-            Azuh Salvation Enyioma
+    <div className="bg-background pt-32 pb-20 grid-bg w-full min-h-screen p-2 flex items-center justify-center overflow-hidden">
+      <div className="container w-[95%] lg:w-[90%] mx-auto flex flex-col gap-5 lg:gap-0 lg:flex-row justify-between items-center h-auto">
+        {/*  */}
+        <div className="w-full lg:w-[50%] flex flex-col gap-5">
+          <p className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-text2 shadow-[0_0_8px_2px_rgba(86,223,148,0.6)]"></span>{" "}
+            <span className="text-text1/90 hover:text-text2 font-ibm text-[11px] uppercase font-light">
+              Lagos, Nigeria
+            </span>{" "}
+            <span className="text-text1/90 hover:text-text2 font-ibm text-[11px] uppercase font-light">
+              /
+            </span>{" "}
+            <span className="text-text1/90 hover:text-text2 font-ibm text-[11px] uppercase font-light">
+              Available for engineering teams
+            </span>
+          </p>
+          <small className="text-text2 font-ibm text-[11px] font-normal uppercase">
+            Full Stack Software Engineer
+          </small>
+          <h2 className="text-text font-manrope font-bold text-6xl md:text-8xl max-w-[500px] leading-15 md:leading-22">
+            Building products that <span className="text-text2">work.</span>
           </h2>
-          <h4 className="text-[#8892b0] text-center  md:text-3xl font-semibold font-sans">
-            Full-stack Developer
-          </h4>
-          <p className=" text-base  max-w-[800px] md:max-w-[750px] p-[15px] md:text-base text-[#8892b0] mx-auto text-center">
-            I build responsive websites, modern user interfaces, and full-stack
-            applications. Whether it’s creating from scratch or optimizing an
-            existing project, I focus on clean code, great performance, and
-            seamless user experience.
+          <p className="text-text1/90 font-light font-manrope max-w-[600px] text-sm  md:text-base tracking-wider">
+            I take features from an understood problem to a production
+            release—across interfaces, APIs, data, integrations, and deployment.
           </p>
-          <p className="flex justify-center mt-[20px]">
-            <Link
-              href="#exp_pro"
-              className=" text-center border border-1 border-[#3d9d91] w-[150px]  text-[#3d9d91] font-bold hover:scale-[1.05] transition-transform font-sans  text-sm p-[10px]"
-            >
-              My Projects
-            </Link>
-          </p>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full md:max-w-[400px] gap-2">
+            {buttonContent.map((b) => (
+              <a
+                key={b.text}
+                href={b.link}
+                className={`font-ibm text-xs w-full rounded-xl md:w-[200px]  flex items-center justify-center gap-3  p-3 border border-text1/30 hover:scale-105 transition-transform  ${b.background} ${b.textColor} ${b.hover}`}
+              >
+                <span>{b.text}</span> <span>{b.icon}</span>
+              </a>
+            ))}
+          </div>
+
+          <small className=" hidden md:flex md:font-ibm md:text-[8px] md:text-text1">
+            ENGINEERED TO SHIP®
+          </small>
+        </div>
+        {/* product pipeline */}
+        <div className=" w-full lg:w-[35%] lg:max-w-[350px] h-auto border border-text1/30">
+          <div className="flex justify-between items-center border-b border-text1/30 px-5 py-4">
+            <h4 className="text-[10px] font-ibm text-text1 font-semibold">
+              PRODUCT PIPELINE
+            </h4>
+            <p className="text-[10px] font-ibm text-text2 font-semibold">
+              Live
+            </p>
+          </div>
+          <div className="flex flex-col gap-2">
+            {pipeline.map((p, index) => (
+              <div
+                key={p.title}
+                className="pipeline-row flex justify-between px-5 py-3 border-b border-text1/30 items-center"
+                style={{ animationDelay: `${index * 0.7}s` }}
+              >
+                <h6 className="flex items-center gap-6">
+                  <span className="font-ibm text-text1 text-[10px] font-normal">
+                    {p.id}
+                  </span>
+                  <span className="font-manrope text-[14px] text-text font-bold">
+                    {p.title}
+                  </span>
+                </h6>
+                <p
+                  className={`text-[10px] font-ibm font-normal text-text1 ${p.color}`}
+                >
+                  {p.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 export default Home;

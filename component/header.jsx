@@ -1,73 +1,97 @@
 "use client";
-
-import Link from "next/link";
 import { IoIosMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
+import { LuDownload } from "react-icons/lu";
 
 import { useState } from "react";
+
+const navlink = [
+  {
+    title: "Work",
+    link: "#work",
+  },
+  {
+    title: "Impact",
+    link: "#impact",
+  },
+  {
+    title: "Experience",
+    link: "#experience",
+  },
+  {
+    title: "Stack",
+    link: "#stack",
+  },
+  {
+    title: "About",
+    link: "#about",
+  },
+  {
+    title: "Contact",
+    link: "#contact",
+  },
+];
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-[#19183B] shadow-[10px_-2px_10px_rgba(255,255,255,0.1)]">
-      <div className="flex justify-between  items-center py-[25px] w-[90%] mx-auto">
+    <div className="fixed top-0 left-0 w-full z-50 bg-background">
+      <div className="container  flex justify-between  items-center py-6 w-[90%] mx-auto">
         {/* Logo section */}
-        <div className="bg-[#263849] w-[40px] relative lg:static   flex justify-center p-[5px] rounded rounded-3xl border border-[#3d9d91] border-3">
-          <Link className="text-[#3d9d91] font-bold font-sans" href="/">
-            SA
-          </Link>
+        <div className="">
+          <a className="flex items-center gap-2" href="/">
+            <span className="text-text text-sm font-manrope font-bold">SA</span>{" "}
+            <span className="bg-text2 rounded-full w-2 h-2 shadow-[0_0_8px_2px_rgba(86,223,148,0.6)]"></span>
+          </a>
         </div>
 
         {/*navbar section*/}
-
         <div
-          className={` flex-col items-center gap-7 fixed inset-0
-            p-[10px] bg-black/70 lg:bg-transparent z-40 justify-center
-          lg:static lg:!flex lg:flex-row lg:justify-between lg:items-center lg:w-[50%] lg:ml-[30px] lg:p-[10px] lg:gap-0 ${
-            menuOpen ? "flex " : "hidden"
-          }`}
+          className={`flex-col w-[95%] absolute top-full left-1/2 -translate-x-1/2 bg-background1 ${
+            menuOpen ? "flex" : "hidden"
+          } md:static md:translate-x-0 md:flex md:flex-row md:w-[65%] md:items-center md:justify-between md:bg-transparent`}
         >
-          <Link
-            href="#about"
-            className="text-[#bbc6e5] font-sans font-semibold hover:text-[#3d9d91] text-sm"
-            onClick={() => setMenuOpen(false)}
-          >
-            About me
-          </Link>
-          <Link
-            href="#exp_pro"
-            onClick={() => setMenuOpen(false)}
-            className="text-[#bbc6e5] font-sans font-semibold hover:text-[#3d9d91] text-sm"
-          >
-            Project/Experience
-          </Link>
-          <Link
-            href="#contact"
-            onClick={() => setMenuOpen(false)}
-            className="text-[#bbc6e5] font-sans hover:text-[#3d9d91] font-semibold text-sm"
-          >
-            Contact
-          </Link>
+          <div className="flex flex-col w-full md:w-auto md:flex-row md:items-center">
+            {navlink.map((link) => (
+              <a
+                className="text-text1/90 hover:text-text2 font-ibm text-[11px] uppercase font-medium py-5 px-4 border-b border-text1/10 md:border-b-0 md:py-0 md:px-3"
+                key={link.title}
+                href={link.link}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.title}
+              </a>
+            ))}
+          </div>
 
-          <Link
-            href="https://docs.google.com/document/d/1puF6qj6JfFW5-YyK1m_jDcu_RmydaHwo/edit?usp=drive_link&ouid=105650029138463119659&rtpof=true&sd=true"
-            onClick={() => setMenuOpen(false)}
-            className=" border-1 border-[#3d9d91] w-[90px]  text-[#3d9d91] font-bold hover:scale-[1.05] transition-transform font-sans text-center text-sm p-[2px]"
-          >
-            Resume
-          </Link>
+          <div className="px-4 py-4 md:p-0">
+            <a
+              href="https://docs.google.com/document/d/1puF6qj6JfFW5-YyK1m_jDcu_RmydaHwo/edit?usp=drive_link&ouid=105650029138463119659&rtpof=true&sd=true"
+              onClick={() => setMenuOpen(false)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border-b border-text hover:border-text2 pb-1 w-fit"
+            >
+              <span className="text-text font-manrope text-[10px] uppercase font-bold">
+                Resume
+              </span>
+              <span className="text-text text-xs">
+                <LuDownload />
+              </span>
+            </a>
+          </div>
         </div>
 
-        <div className="lg:hidden relative z-50 ">
+        <div className="md:hidden relative z-50 border p-2 border-text1/50">
           {menuOpen ? (
             <IoMdClose
               onClick={() => setMenuOpen(false)}
-              className="text-[#3d9d91] text-3xl"
+              className="text-text cursor-pointer hover:text-text2 text-xl"
             />
           ) : (
             <IoIosMenu
               onClick={() => setMenuOpen(true)}
-              className="text-[#3d9d91] text-3xl"
+              className="text-text cursor-pointer hover:text-text2 text-xl"
             />
           )}
         </div>
@@ -77,8 +101,3 @@ function Header() {
 }
 
 export default Header;
-
-
-
-
-
