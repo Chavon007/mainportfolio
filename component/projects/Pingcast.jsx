@@ -24,8 +24,11 @@ const tools = [
 ];
 function Pingcast() {
   return (
-    <div className="flex items-center justify-between mt-20 border-b border-text1/50 pb-20">
-      <div className="w-[55%]">
+    <div className="flex flex-col md:flex-row gap-5 md:gap-0 md:items-center md:justify-between mt-10 md:mt-0 border-b border-text1/50 pb-10 md:pb-20">
+      <small className="md:hidden text-text1/90 font-ibm text-[10px] tracking-wider font-light">
+        PROJECT / 02 — AI + AUTOMATION
+      </small>
+      <div className=" w-full md:w-[55%]">
         <Image
           src={pingcast}
           alt="frootify"
@@ -34,16 +37,18 @@ function Pingcast() {
           style={{ width: "100%", height: "100%" }}
         />
       </div>
-      <div className="w-[40%] flex flex-col gap-5">
-        <small className="text-text1/90 font-ibm text-[10px] tracking-wider font-light">
+      <div className=" w-full md:w-[40%] flex flex-col gap-3 md:gap-5">
+        <small className="hidden md:flex text-text1/90 font-ibm text-[10px] tracking-wider font-light">
           PROJECT / 02 — AI + AUTOMATION
         </small>
-        <h3 className="font-manrope text-6xl font-bold text-text">Pingcast</h3>
-        <p className="text-text w-[350px] text-2xl font-semi-bold font-manrope">
+        <h3 className="font-manrope text-5xl md:text-6xl font-bold text-text">
+          Pingcast
+        </h3>
+        <p className="text-text w-[350px] text-xl md:text-2xl font-semi-bold font-manrope">
           A weather concierge that turns forecast data into useful, scheduled
           daily guidance.
         </p>
-        <p className="text-text1/90 font-manrope w-[350px] font-medium">
+        <p className="text-text1/90  font-manrope w-[350px] font-medium">
           Built with React, Laravel, and PostgreSQL. Open-Meteo supplies
           forecast data; Groq generates personalized recommendations; automated
           scheduling handles delivery.
@@ -58,10 +63,10 @@ function Pingcast() {
           </p>
         </div>
 
-        <div className="flex justify-between items-center w-[450px] gap-2">
+        <div className="grid grid-cols-3 md:grid-cols-6 md:w-[250px] gap-2">
           {tools.map((t) => (
             <p
-              className="text-text1 font-ibm font-light text-[10px] border border-text1/50 p-2"
+              className="text-text1 font-ibm font-light text-[10px] border border-text1/50 p-2 text-center"
               key={t.text}
             >
               {t.text}
@@ -76,7 +81,7 @@ function Pingcast() {
         >
           pingcast.site
           <span>
-            <MdArrowOutward/>
+            <MdArrowOutward />
           </span>
         </a>
       </div>

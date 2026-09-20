@@ -66,10 +66,10 @@ function Home() {
         <div className="w-full lg:w-[50%] flex flex-col gap-5">
           <p className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-text2 shadow-[0_0_8px_2px_rgba(86,223,148,0.6)]"></span>{" "}
-            <span className="text-text1/90 hover:text-text2 font-ibm text-[11px] uppercase font-light">
+            <span className="text-text1/90 hover:text-text2 font-ibm text-[9px] md:text-[11px] uppercase font-light">
               Lagos, Nigeria
             </span>{" "}
-            <span className="text-text1/90 hover:text-text2 font-ibm text-[11px] uppercase font-light">
+            <span className="text-text1/90 hover:text-text2 font-ibm text-[9px] md:text-[11px] uppercase font-light">
               /
             </span>{" "}
             <span className="text-text1/90 hover:text-text2 font-ibm text-[11px] uppercase font-light">

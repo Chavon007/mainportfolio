@@ -57,13 +57,13 @@ const live = [
 
 function Fixdride() {
   return (
-    <div className="flex items-center justify-between mt-20   border-b border-text1/50 pb-20">
-      <div className="w-[40%] flex flex-col gap-5">
+    <div className="flex flex-col md:flex-row gap-5 md:gap-0 md:items-center md:justify-between mt-15 mdmt-20 border-b border-text1/50 pb-15 md:pb-20">
+      <div className="w-full md:w-[40%] flex flex-col gap-2 md:gap-5">
         <small className="text-text1/90 font-ibm text-[10px] tracking-wider font-light">
           PROJECT / 03 — Auto Service Mobile & Web Platform
         </small>
         <h3 className="font-manrope text-6xl font-bold text-text">FixDRide</h3>
-        <p className=" text-text text-2xl font-light font-manrope">
+        <p className=" text-text text-base md:text-2xl font-light font-manrope">
           Connecting vehicle owners to reliable auto service providers.
           Co-developed the cross-platform mobile and web experience that hit 50+
           users in its first month of launch.
@@ -83,10 +83,10 @@ function Fixdride() {
             </div>
           ))}
         </div>
-        <div className="flex justify-between items-center w-[300px] gap-2">
+        <div className="grid grid-cols-3 md:grid-cols-6 md:w-[250px] gap-2">
           {tools.map((t) => (
             <p
-              className="text-text1 font-ibm font-light text-[10px] border border-text1/50 p-2"
+              className="text-text1 text-center font-ibm font-light text-[10px] border border-text1/50 p-2"
               key={t.text}
             >
               {t.text}
@@ -108,7 +108,7 @@ function Fixdride() {
         </div>
       </div>
 
-      <div className="w-[55%]">
+      <div className=" w-full md:w-[55%]">
         <Image
           src={fixdride}
           alt="fixdride"

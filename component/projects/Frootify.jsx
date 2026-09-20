@@ -11,10 +11,9 @@ const features = [
     title: "Built",
     description: (
       <>
-        Multi-step registration, 
-        <span className="text-text2">15+</span> secure APIs,
-        optimized queries, newsletter automation with mautic paltform, and
-        production features.
+        Multi-step registration,
+        <span className="text-text2">15+</span> secure APIs, optimized queries,
+        newsletter automation with mautic paltform, and production features.
       </>
     ),
   },
@@ -22,9 +21,8 @@ const features = [
     title: "Result",
     description: (
       <>
-        <span className="text-text2 ">35%</span> onboarding
-        efficiency · <span className="text-text2">25%</span>{" "}
-        dashboard performance.
+        <span className="text-text2 ">35%</span> onboarding efficiency ·{" "}
+        <span className="text-text2">25%</span> dashboard performance.
         <span className="text-text2 ">95+</span> Lighthouse
       </>
     ),
@@ -66,13 +64,13 @@ const live = [
 
 function Frootify() {
   return (
-    <div className="flex items-center justify-between  border-b border-text1/50 pb-20">
-      <div className="w-[40%] flex flex-col gap-5">
+    <div className="flex flex-col md:flex-row gap-5 md:gap-0 md:items-center md:justify-between  border-b border-text1/50 pb-15 md:pb-20">
+      <div className=" w-full md:w-[40%] flex flex-col gap-2 md:gap-5">
         <small className="text-text1/90 font-ibm text-[10px] tracking-wider font-light">
           PROJECT / 01 — PRODUCTION ECOSYSTEM
         </small>
         <h3 className="font-manrope text-6xl font-bold text-text">Frootify</h3>
-        <p className=" text-text text-2xl font-light font-manrope">
+        <p className=" text-text text-base md:text-2xl font-light font-manrope">
           Preventive healthcare, made operational from acquisition through
           vendor management.
         </p>
@@ -91,10 +89,10 @@ function Frootify() {
             </div>
           ))}
         </div>
-        <div className="flex justify-between items-center w-[250px] gap-2">
+        <div className="grid grid-cols-3 md:grid-cols-6  md:w-[250px] gap-2">
           {tools.map((t) => (
             <p
-              className="text-text1 font-ibm font-light text-[10px] border border-text1/50 p-2"
+              className="text-text1 text-center font-ibm font-light text-[10px] border border-text1/50 p-2"
               key={t.text}
             >
               {t.text}
@@ -116,7 +114,7 @@ function Frootify() {
         </div>
       </div>
 
-      <div className="w-[55%]">
+      <div className=" w-full md:w-[55%]">
         <Image
           src={frootify}
           alt="frootify"
@@ -127,6 +125,6 @@ function Frootify() {
       </div>
     </div>
   );
-}       
+}
 
 export default Frootify;
