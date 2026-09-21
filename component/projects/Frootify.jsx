@@ -55,7 +55,7 @@ const live = [
 
 function Frootify() {
   return (
-    <div className="w-full border-b border-text1/20 py-20 md:py-28">
+    <div className="w-full border-b border-text1/20  md:pb-28">
       <div className="border border-text1/20 bg-background1/40 overflow-hidden">
         {/* PROJECT HEADER */}
         <div className="flex items-center justify-between border-b border-text1/20 px-5 md:px-8 py-4">

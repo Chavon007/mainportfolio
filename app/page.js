@@ -1,17 +1,16 @@
 import Home from "@/component/home";
 import About from "@/component/about";
-import Skills from "@/component/skills";
 import Contact from "@/component/contact";
 import Project from "@/component/project";
+import Impact from "@/component/Impact";
 
 export default function App() {
   return (
     <>
       <Home />
       <Project />
+      <Impact/>
       <About />
-      <Skills />
-
       <Contact />
     </>
   );
