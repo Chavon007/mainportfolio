@@ -1,7 +1,7 @@
 import Frootify from "./projects/Frootify";
 import Pingcast from "./projects/Pingcast";
 import Fixdride from "./projects/Fixdride";
-
+import Axis from "./projects/Axis";
 function Project() {
   return (
     <div className="bg-background min-h-screen  w-full pb-20 overflow-hidden">
@@ -27,6 +27,7 @@ function Project() {
           <Frootify />
           <Pingcast />
           <Fixdride />
+          <Axis />
         </div>
       </div>
     </div>
