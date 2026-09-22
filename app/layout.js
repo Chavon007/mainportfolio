@@ -2,12 +2,11 @@ import "./globals.css";
 
 import Header from "@/component/header";
 
-
 import { IBM_Plex_Mono, Manrope } from "next/font/google";
 
 export const metadata = {
-  title: "Salvation Azuh || Web Developer",
-  description: "Salvation Azuh Full-stack Developer",
+  title: "Salvation Azuh || Software Engineer",
+  description: "Salvation Azuh Full-stack Software Engineer",
 };
 
 const ibemPlexMono = IBM_Plex_Mono({
@@ -28,7 +27,6 @@ export default function RootLayout({ children }) {
       <body className="">
         <Header />
         {children}
-       
       </body>
     </html>
   );
