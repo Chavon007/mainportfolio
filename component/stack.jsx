@@ -43,8 +43,8 @@ function Stack() {
   };
 
   return (
-    <div className="bg-background1 w-full py-24 md:py-32">
-      <div className="container w-[95%] max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-16 md:gap-24">
+    <div id="stack" className="bg-background1 w-full py-24 md:py-32">
+      <div className="container w-[95%] md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-16 md:gap-24">
         {/* intro block */}
         <div className="flex flex-col gap-5 md:sticky md:top-24 md:self-start">
           <span className="text-text2 font-ibm text-xs tracking-wide">
@@ -52,7 +52,7 @@ function Stack() {
           </span>
 
           <h3 className="font-manrope font-bold text-4xl md:text-6xl leading-[1.05] text-text max-w-[360px]">
-            Tools in <span className="text-text2">context</span>.
+            Tools in <span className="text-text2">context.</span>
           </h3>
 
           <p className="text-text1/60 font-manrope font-light text-[15px] leading-relaxed max-w-[360px]">

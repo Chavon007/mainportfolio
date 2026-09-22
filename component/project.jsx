@@ -4,7 +4,7 @@ import Fixdride from "./projects/Fixdride";
 import Axis from "./projects/Axis";
 function Project() {
   return (
-    <div className="bg-background min-h-screen  w-full pb-20 overflow-hidden">
+    <div id="work" className="bg-background min-h-screen  w-full pb-20 overflow-hidden">
       <div className="container w-[95%] md:w-[90%] mx-auto">
         {/* header */}
         <div className="flex flex-col md:flex-row border-b border-text1/30  md:justify-between md:items-end pb-8  md:py-20 gap-3 md:gap-0">

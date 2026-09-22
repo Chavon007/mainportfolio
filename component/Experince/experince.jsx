@@ -36,7 +36,7 @@ function Experience() {
   const ActiveComponent = active.component;
 
   return (
-    <section className="bg-background min-h-screen w-full py-20">
+    <section id="experience" className="bg-background min-h-screen w-full py-20">
       <div className="container w-[95%] md:w-[90%] mx-auto">
         <small className="w-full md:w-[25%] text-text2 font-ibm font-medium text-[10px] uppercase tracking-widest">
           03 / Experience log
@@ -84,7 +84,7 @@ function Experience() {
           </div>
 
           {/* Active experience */}
-          <div className="px-0 md:px-16 py-10 md:py-16">
+          <div className="px-0  md:pl-10 lg:px-16 py-10 lg:py-16">
             <ActiveComponent />
           </div>
         </div>

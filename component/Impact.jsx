@@ -42,15 +42,15 @@ const nums2 = [
 
 function Impact() {
   return (
-    <div className="bg-text min-h-screen w-full py-20 overflow-hidden">
+    <div id="impact" className="bg-text min-h-auto w-full py-20 overflow-hidden">
       <div className="container w-[95%] md:w-[90%] mx-auto">
         {/* header */}
-        <div className="flex flex-col md:flex-row border-b border-background/10  md:justify-between md:items-end pb-8  md:py-20  gap-3 md:gap-0">
-          <small className=" w-full md:w-[25%] text-background/50 font-ibm font-medium text-[10px] uppercase tracking-widest">
+        <div className="flex flex-col md:flex-row border-b border-background/10  md:justify-between md:items-end pb-8  md:py-20  gap-3 lg:gap-0">
+          <small className=" w-full md:w-[40%] lg:w-[25%] text-background/50 font-ibm font-medium text-[10px] uppercase tracking-widest">
             02 / Engineering impact
           </small>
 
-          <h2 className="w-full md:w-[50%] text-4xl md:text-7xl md:tracking-wide tracking-[0.020em] font-manrope font-bold md:leading-15 text-background">
+          <h2 className="w-full  md:text-center lg:text-start lg:w-[50%] text-4xl md:text-5xl lg:text-7xl md:tracking-wide tracking-[0.020em] font-manrope font-bold md:leading-15 text-background">
             Measured in outcomes.
           </h2>
 

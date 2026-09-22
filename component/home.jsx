@@ -4,7 +4,7 @@ import { MdArrowOutward } from "react-icons/md";
 const buttonContent = [
   {
     text: "View past works",
-    link: "#project",
+    link: "#work",
     icon: <FaArrowDownLong />,
     background: "bg-text2",
     textColor: "text-background",
@@ -86,7 +86,7 @@ function Home() {
             I take features from an understood problem to a production
             release—across interfaces, APIs, data, integrations, and deployment.
           </p>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full md:max-w-[400px] gap-2">
+          <div className="flex flex-col focus:outline-none md:flex-row md:items-center md:justify-between w-full md:max-w-[400px] gap-2">
             {buttonContent.map((b) => (
               <a
                 key={b.text}

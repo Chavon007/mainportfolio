@@ -66,11 +66,11 @@ function Header() {
 
           <div className="px-4 py-4 md:p-0">
             <a
-              href="https://docs.google.com/document/d/1puF6qj6JfFW5-YyK1m_jDcu_RmydaHwo/edit?usp=drive_link&ouid=105650029138463119659&rtpof=true&sd=true"
+              href="https://drive.google.com/file/d/1lPkVi757dlgpPuU2iPvywUuzbK_xUaki/view?usp=sharing"
               onClick={() => setMenuOpen(false)}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 border-b border-text hover:border-text2 pb-1 w-fit"
+              className="flex focus:outline-none items-center gap-2 border-b border-text hover:border-text2 pb-1 w-fit"
             >
               <span className="text-text font-manrope text-[10px] uppercase font-bold">
                 Resume

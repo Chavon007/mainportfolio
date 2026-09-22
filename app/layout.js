@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import Header from "@/component/header";
-import Footer from "@/component/footer";
+
 
 import { IBM_Plex_Mono, Manrope } from "next/font/google";
 
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       <body className="">
         <Header />
         {children}
-        <Footer />
+       
       </body>
     </html>
   );
