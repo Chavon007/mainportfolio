@@ -195,7 +195,7 @@ function Axis() {
               </div>
 
               <a
-                href="https://www.pingcast.site/"
+                href="https://github.com/Chavon007/axis/releases/download/v1.0.0/axis-v1.0.0.apk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group mt-6 flex items-center justify-between w-[150px] border-b border-text1/20 pb-2.5 font-ibm text-[10px] text-text hover:text-text2 transition-colors"
