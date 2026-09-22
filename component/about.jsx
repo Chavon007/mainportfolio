@@ -1,68 +1,71 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
+const content = [
+  { text: "User empathy — thinking about people, not just specs" },
+  { text: "Clear technical writing and documentation" },
+  { text: "Cross-functional collaboration" },
+  { text: "Product awareness beyond the code layer" },
+];
+
 function About() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      viewport={{ once: false }}
-      className=" container mx-auto pt-[100px] "
-      id="about"
-    >
-      <div>
-        <h2 className="text-center pt-[10px] text-[#ccd6f6] text-3xl font-bold font-sans">
-          About Me
-        </h2>
+    <div className="bg-background min-h-screen w-full pb-20 overflow-hidden">
+      <div className="w-[90%] md:w-[90%] mx-auto pt-24 md:pt-32 flex flex-col md:flex-row gap-12 md:gap-16">
+        {/* left: intro */}
+        <div className="md:w-[58%] flex flex-col gap-6">
+          <small className="flex items-center gap-2 text-text2 font-ibm text-xs uppercase tracking-widest">
+            05 / About
+          </small>
 
-        {/*about me */}
-        <div className="w-[90%] mx-auto pt-[20px] md:flex md:justify-between md:items-center">
-          {/*about info*/}
-          <div className=" w-[100%] mx-auto md:w-[50%]">
-            <h3 className="w-[100%] md:mx-auto text-sm text-center md:text-1xl font-serif p-[10px] font-semibold text-[#3d9d91]">
-              Full-Stack Web Developer
-            </h3>
-            <p className="text-base pb-2 text-[#8892b0] font-serif">
-              I am Salvation, a Full-Stack Web Developer who doesn’t just write
-              code. I architect, build, and ship high-performance web solutions
-              that speak for themselves.
+          <h3 className="font-serif text-text text-4xl md:text-6xl leading-[1.1] max-w-[560px]">
+            From storytelling to engineering.
+          </h3>
+
+          <div className="flex flex-col gap-5 max-w-[560px] mt-2">
+            <p className="text-text1 font-manrope text-[14px] font-light leading-relaxed">
+              I studied Communication Arts at the University of Uyo — not
+              Computer Science. That background shaped how I approach
+              engineering: I think about the person using the software, not
+              just the system running it.
             </p>
-            <p className="text-base pb-2 text-[#8892b0] font-serif">
-              With hands-on experience in HTML, CSS, JavaScript, TypeScript,
-              React, Next.js, Node.js, Express, and MongoDB, I build full-stack
-              applications that are clean, scalable, and fast. I specialize in
-              turning complex ideas into responsive, functional, and user-driven
-              digital experiences.
+            <p className="text-text1 font-manrope text-[14px] font-light leading-relaxed">
+              I transitioned into software through building actual products —
+              APIs processing real transactions, dashboards real vendors rely
+              on, mobile apps with real download counts. Not bootcamp theory.
             </p>
-            <p className="text-base pb-2 text-[#8892b0] font-serif">
-              Every project I touch is built with precision, bold energy, and
-              zero shortcuts. I work across the stack with confidence, from API
-              architecture to pixel-perfect frontends.
+            <p className="text-text1 font-manrope text-[14px] font-light leading-relaxed">
+              That path gives me something unusual: I can write the code and
+              explain why it matters. I build the feature and understand the
+              user behind it. I collaborate clearly, document thoroughly, and
+              care about the whole product — not just my piece of it.
             </p>
-          </div>
-          {/* about image */}
-          <div className="w-[80%] mx-auto pt-[10px] md:w-[40%] ">
-            <Image
-              className="rounded rounded-4xl "
-              src="/2.jpg"
-              alt=""
-              width={100}
-              height={100}
-              style={{ width: "350px", height: "300px" }}
-            />
           </div>
         </div>
 
-        {/*about me skills */}
-        <div></div>
+        {/* right: humanities-background card */}
+        <div className="md:w-[42%]">
+          <div className="border border-text/10 bg-background1 rounded-lg p-6 md:p-8">
+            <h4 className="text-text2 font-ibm text-xs uppercase tracking-widest">
+              What the humanities background adds
+            </h4>
 
-        {/*What i do */}
-
-        <div></div>
+            <div className="flex flex-col gap-4 mt-6">
+              {content.map((c) => (
+                <p key={c.text} className="flex items-start gap-3">
+                  <span className="text-text2 font-ibm text-sm leading-6">
+                    -
+                  </span>
+                  <span className="text-text1 font-manrope text-sm leading-relaxed">
+                    {c.text}
+                  </span>
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
+
 export default About;
