@@ -37,7 +37,7 @@ function Experience() {
 
   return (
     <section className="bg-background min-h-screen w-full py-20">
-      <div className="w-[90%] md:w-[90%] mx-auto">
+      <div className="container w-[95%] md:w-[90%] mx-auto">
         <small className="w-full md:w-[25%] text-text2 font-ibm font-medium text-[10px] uppercase tracking-widest">
           03 / Experience log
         </small>

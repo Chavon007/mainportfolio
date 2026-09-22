@@ -5,6 +5,7 @@ import Project from "@/component/project";
 import Impact from "@/component/Impact";
 import Experience from "@/component/Experince/experince";
 import Stack from "@/component/stack";
+import HowIWork from "@/component/woek";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Experience />
       <Stack />
       <About />
+      <HowIWork />
       <Contact />
     </>
   );

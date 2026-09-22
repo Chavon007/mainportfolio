@@ -10,7 +10,7 @@ const content = [
 function About() {
   return (
     <div className="bg-background min-h-screen w-full pb-20 overflow-hidden">
-      <div className="w-[90%] md:w-[90%] mx-auto pt-24 md:pt-32 flex flex-col md:flex-row gap-12 md:gap-16">
+      <div className="container w-[95%] md:w-[90%] mx-auto pt-24 md:pt-32 flex flex-col md:flex-row gap-12 md:gap-16">
         {/* left: intro */}
         <div className="md:w-[58%] flex flex-col gap-6">
           <small className="flex items-center gap-2 text-text2 font-ibm text-xs uppercase tracking-widest">

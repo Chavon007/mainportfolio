@@ -5,7 +5,7 @@ import Axis from "./projects/Axis";
 function Project() {
   return (
     <div className="bg-background min-h-screen  w-full pb-20 overflow-hidden">
-      <div className="w-[90%] md:w-[90%] mx-auto">
+      <div className="container w-[95%] md:w-[90%] mx-auto">
         {/* header */}
         <div className="flex flex-col md:flex-row border-b border-text1/30  md:justify-between md:items-end pb-8  md:py-20 gap-3 md:gap-0">
           <small className=" w-full md:w-[25%] text-text2 font-ibm font-medium text-[10px] uppercase tracking-widest">
